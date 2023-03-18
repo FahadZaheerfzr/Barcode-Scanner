@@ -18,6 +18,9 @@ function App() {
   const [scannedButNotinExcel, setScannedButNotinExcel] = React.useState(false);
 
   React.useEffect(() => {
+
+    document.title = 'Barcode Scanner';
+
     var request = new XMLHttpRequest();
     request.open('GET', excelFile, true);
     request.responseType = "arraybuffer";
